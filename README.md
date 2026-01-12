@@ -1,68 +1,56 @@
-🧠 ABL Training Engagement & Team Allocation Dashboard
+# ABL Training Engagement & Team Allocation Dashboard
 
-(SQL + Power BI Project)
+## Project Overview  
+This project analyzes training engagement data of more than 200 participants to help management track performance, follow-ups, and team allocation.  
+SQL is used for data cleaning and analytics, and Power BI is used to build interactive dashboards.
 
-📌 Project Overview
+The goal is to help the training team understand who has replied, who needs follow-up, and how participants should be distributed across teams and rooms.
 
-This project analyzes training engagement data of 200+ participants to help management monitor performance, improve follow-ups, and plan training rooms efficiently.
+---
 
-Using SQL for data cleaning and analytics and Power BI for visualization, this solution provides a complete end-to-end business intelligence system for training operations.
-
-🏢 Business Problem
+## Business Problem  
 
 ABL conducts training sessions across multiple cities. Management needs to:
 
-Track who has replied vs not replied
+Track who replied and who did not  
+Measure Assigned Lead performance  
+Ensure balanced male and female teams  
+Support room planning by city and gender  
+Identify low engagement locations  
 
-Measure Assigned Lead performance
+This project solves all these problems in one integrated analytics system.
 
-Ensure fair male/female distribution across teams
+---
 
-Support room planning by city & gender
+## Dataset  
 
-Identify low engagement areas
+The dataset contains training participant records with the following fields:
 
-This project solves all of these in one integrated dashboard.
+Name  
+Gender  
+Email  
+Contact Number  
+Location  
+Assigned Lead  
+Mail Replied  
+Team Number  
 
-📂 Dataset
+The raw data had spelling errors, extra spaces, invalid characters, and missing values. All of this was cleaned using SQL.
 
-The dataset contains training participant records, including:
+---
 
-Name
+## Data Cleaning (SQL)
 
-Gender
+The following actions were performed using SQL:
 
-Email
-
-Contact Number
-
-Location
-
-Assigned Lead
-
-Mail Reply Status
-
-Team Number
-
-Raw data was inconsistent and required extensive cleaning before analysis.
-
-🧹 Data Cleaning Using SQL
-
-Key cleaning steps:
-
-Removed invalid characters (Â, extra spaces)
-
-Standardized gender values
-
-Fixed incorrect Assigned Lead names
-
-Converted missing replies to "No"
-
-Validated email formats
-
-Identified duplicate emails
-
-Created gender-balanced team numbers using window functions
+Trimmed extra spaces from text fields  
+Removed special characters like Â  
+Standardized gender values  
+Fixed incorrect Assigned Lead names  
+Converted NULL and blank replies to "No"  
+Validated email formats  
+Detected duplicate emails  
+Assigned balanced team numbers by gender  
 
 Example:
 
@@ -73,33 +61,33 @@ UPDATE training_analysis
 SET mail_replied = 'No'
 WHERE mail_replied IS NULL OR mail_replied = '';
 
-📊 KPIs Created
-Metric	Description
-Total Participants	Total attendees
-Replied	People who replied
-Not Replied	Pending follow-ups
-Reply Rate %	Engagement score
-Lead Performance	Response rate by trainer
-Gender Split	Male vs Female
-Location Share	City-wise participation
-Team Balance	Gender distribution per team
-🧮 SQL Analytics Used
 
-This project demonstrates real-world SQL including:
+---
 
-CASE WHEN
+## KPIs Created  
 
-GROUP BY & HAVING
+Total Participants  
+Replied  
+Not Replied  
+Reply Rate (%)  
+Assigned Lead Performance  
+Gender Distribution  
+Location Contribution  
+Team-wise Male/Female Count  
 
-WINDOW FUNCTIONS (ROW_NUMBER, DENSE_RANK)
+---
 
-CTEs
+## SQL Analysis  
 
-VIEWS
+This project uses real business-grade SQL concepts:
 
-Percentage calculations
-
-Duplicate detection
+CASE WHEN  
+GROUP BY and HAVING  
+Window functions (ROW_NUMBER, DENSE_RANK)  
+CTEs  
+Views  
+Percentage calculations  
+Duplicate detection  
 
 Example:
 
