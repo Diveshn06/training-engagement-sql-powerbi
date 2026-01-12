@@ -166,10 +166,11 @@ ABL_Project/
 │   └── ABL_Dashboard.pbix
 └── README.md
 
-Dashboard Preview
+## 📊 Dashboard Preview
 
-Engagement & Performance
-![Engagement Dashboard]([images/Screenshot%202026-01-12%20211740.png](https://github.com/Diveshn06/training-engagement-sql-powerbi/blob/main/ABL_Project/images/Screenshot%202026-01-12%20211740.png))
+### Engagement & Performance
+![Engagement Dashboard](ABL_Project/images/dashboard_page1.png)
 
-Team & Room Planning
-![Team Dashboard]([images/Screenshot%202026-01-12%20233911.png](https://github.com/Diveshn06/training-engagement-sql-powerbi/blob/main/ABL_Project/images/Screenshot%202026-01-12%20233911.png))
+### Team & Room Planning
+![Team Planning](ABL_Project/images/dashboard_page2.png)
+
