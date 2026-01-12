@@ -96,51 +96,47 @@ ROUND(SUM(CASE WHEN mail_replied='Yes' THEN 1 ELSE 0 END)*100/COUNT(*),2) AS rep
 FROM training_analysis
 GROUP BY assigned_lead;
 
-📈 Power BI Dashboards
-🔹 Page 1 – Engagement & Performance
+ 
+---
 
-Tracks:
+## 📈Power BI Dashboard  
 
-Reply rate
+The Power BI dashboard contains two main pages:
 
-Assigned Lead performance
+Page 1 – Engagement Analysis  
+Shows total participants, replied vs not replied, reply rate, Assigned Lead performance, and gender & location distribution.
 
-Gender & location distribution
+Page 2 – Team & Room Planning  
+Shows male vs female per team, balanced team allocation, and city-wise participant distribution.
 
-🔹 Page 2 – Team & Room Planning
+These dashboards help management plan training rooms and prioritize follow-ups.
 
-Tracks:
+---
 
-Male vs Female per team
+## Business Impact  
 
-Balanced team allocation
+This project helps ABL to:
 
-City-wise room planning
+Identify low-performing trainers  
+Improve follow-up efficiency  
+Ensure gender-balanced teams  
+Plan training rooms by city  
+Make data-driven decisions  
 
-These dashboards allow management to instantly see who needs follow-up and how to plan rooms effectively.
+---
 
-🧠 Business Impact
+## Tools Used  
 
-This dashboard helps ABL:
+MySQL  
+SQL  
+Power BI  
+Excel / CSV  
 
-Identify low-performing trainers
+---
 
-Improve email follow-up efficiency
+## Repository Structure  
 
-Ensure gender-balanced teams
 
-Optimize room allocation
-
-Enable data-driven training decisions
-
-🛠 Tools Used
-Tool	Purpose
-MySQL	Data cleaning & analysis
-SQL	Business logic & KPIs
-Power BI	Interactive dashboards
-Excel / CSV	Raw data
-
-📁 Repository Structure
 ABL_Project/
 │
 ├── dataset/
